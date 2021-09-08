@@ -1,8 +1,18 @@
 import math
 
-a = int(input("Add meg az 'a' változót: "))
-b = int(input("Add meg a 'b' változót: "))  # TODO: elegánsabban
-c = int(input("Add meg a 'c' változót: "))
+
+def bekeres(valtozo_neve):
+    user_input = input(f"{valtozo_neve} változó értéke: ")
+    try:
+        user_input = int(user_input)
+    except ValueError:
+        print("Számot adjon meg")
+    return user_input
+
+
+a = bekeres("a")
+b = bekeres("b")
+c = bekeres("c")
 D = b^2 - 4*a*c
 
 if D < 0:
